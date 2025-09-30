@@ -1,0 +1,60 @@
+@page {
+    size: A4;
+    margin: 2cm;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    page-break-after: avoid;
+}
+
+h1 {
+    font-size: 18pt;
+    margin-bottom: 1em;
+}
+
+h2 {
+    font-size: 16pt;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 14pt;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+}
+
+h4 {
+    font-size: 12pt;
+    margin-top: 0.8em;
+    margin-bottom: 0.3em;
+}
+
+p {
+    margin-bottom: 0.5em;
+    orphans: 3;
+    widows: 3;
+}
+
+ul, ol {
+    margin-bottom: 0.8em;
+}
+
+li {
+    margin-bottom: 0.2em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.5em auto;
+}
