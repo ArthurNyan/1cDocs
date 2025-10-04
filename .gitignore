@@ -1,2 +1,4 @@
 # /unpacked_config
 .pdf
+.DS_Store
+*.DS_Store
