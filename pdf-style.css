@@ -95,3 +95,190 @@ hr {
 .page-break {
     page-break-before: always;
 }
+
+/* Стили для таблиц */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+    font-size: 11pt;
+    page-break-inside: avoid;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+table tr:hover {
+    background-color: #e8f4f8;
+}
+
+/* Стили для заголовков таблиц */
+table caption {
+    font-weight: bold;
+    font-size: 12pt;
+    color: #2c3e50;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+/* Стили для таблиц с особым форматированием */
+table.risk-table {
+    border: 2px solid #3498db;
+}
+
+table.risk-table th {
+    background-color: #3498db;
+    color: white;
+    border-color: #2980b9;
+}
+
+table.risk-table td {
+    border-color: #bdc3c7;
+}
+
+/* Стили для таблиц с приоритетами */
+table.priority-table td:nth-child(4) {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Стили для приоритетов рисков будут применяться через классы */
+
+/* Стили для таблиц бюджета */
+table.budget-table td:nth-child(2) {
+    text-align: right;
+    font-weight: bold;
+}
+
+table.budget-table td:nth-child(3) {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* Стили для таблиц ролей */
+table.roles-table th:first-child {
+    width: 30%;
+}
+
+table.roles-table th:last-child {
+    width: 70%;
+}
+
+/* Стили для таблиц с длинным текстом */
+table.long-text-table td {
+    max-width: 200px;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Стили для таблиц с ID */
+table.id-table td:first-child {
+    font-weight: bold;
+    font-family: "Courier New", monospace;
+    background-color: #ecf0f1;
+    width: 80px;
+    text-align: center;
+}
+
+/* Стили для таблиц сценариев */
+table.scenario-table td:first-child {
+    font-weight: bold;
+    color: #2c3e50;
+    width: 25%;
+}
+
+table.scenario-table td:last-child {
+    text-align: right;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* Обертка для таблиц */
+.table-wrapper {
+    margin: 1em 0;
+    overflow-x: auto;
+}
+
+.table-wrapper table {
+    margin: 0;
+}
+
+/* Стили для таблиц с особыми классами */
+table.roles-table {
+    border: 1px solid #bdc3c7;
+}
+
+table.roles-table th {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+table.risk-analysis-table {
+    border: 2px solid #e74c3c;
+}
+
+table.risk-analysis-table th {
+    background-color: #e74c3c;
+    color: white;
+}
+
+table.budget-table {
+    border: 2px solid #27ae60;
+}
+
+table.budget-table th {
+    background-color: #27ae60;
+    color: white;
+}
+
+table.budget-table td:nth-child(2) {
+    text-align: right;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+table.indicator-table {
+    border: 1px solid #f39c12;
+}
+
+table.indicator-table th {
+    background-color: #f39c12;
+    color: white;
+}
+
+/* Стили для статусов рисков */
+.status-critical {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.status-high {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.status-medium {
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+.status-low {
+    color: #27ae60;
+    font-weight: bold;
+}
