@@ -4,7 +4,7 @@
   "description": "Документация проекта «Магазин одежды 1Стиль» по PMBOK Guide 6-я редакция",
   "main": "index.js",
   "scripts": {
-    "build": "docker-compose run --rm build",
+    "build": "cd scripts && bash generate_web_simple.sh",
     "build:local": "cd scripts && bash generate_web_simple.sh",
     "dev": "docker-compose up web",
     "dev:local": "python3 -m http.server 8000 --directory dist",

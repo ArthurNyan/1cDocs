@@ -4,7 +4,7 @@ package-lock.json
 yarn.lock
 
 # Build outputs - полностью игнорируем dist/
-dist/
+# dist/
 
 # Локально установленный Pandoc для Vercel
 bin/
