@@ -1,0 +1,29 @@
+{
+  "name": "1c-docs-project",
+  "version": "1.0.0",
+  "description": "Документация проекта «Магазин одежды 1Стиль» по PMBOK Guide 6-я редакция",
+  "main": "index.js",
+  "scripts": {
+    "build": "bash generate_web_simple.sh",
+    "dev": "python3 -m http.server 8000 --directory dist",
+    "clean": "rm -rf dist/*.html dist/temp_content.html",
+    "generate:pdf": "bash generate_all_pdfs.sh",
+    "deploy": "vercel --prod",
+    "vercel-build": "bash generate_web_simple.sh"
+  },
+  "keywords": [
+    "pmbok",
+    "project-management",
+    "documentation",
+    "1c",
+    "loyalty-system"
+  ],
+  "author": "ООО «1Стиль»",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nahatakyan/1cDocs.git"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

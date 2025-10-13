@@ -109,7 +109,7 @@ $(cat "$DIST_DIR/temp_content.html")
         </article>
         <footer class="doc-footer">
             <p>Документация проекта "Магазин одежды «1Стиль»"</p>
-            <p>ООО «1Стиль» • PM Book 5-я редакция • 2025</p>
+            <p>ООО «1Стиль» • PMBOK 6-я редакция • 2025</p>
         </footer>
     </main>
     
