@@ -6,7 +6,8 @@ echo "=== Генерация PDF документов проекта ==="
 echo ""
 
 # Переход в директорию docs
-cd /Users/nahatakyan/Documents/Assets/edu/1cDocs/docs
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR/../docs"
 
 # Поиск всех .md файлов и генерация PDF
 find . -name "*.md" -type f | while read -r mdfile; do
@@ -23,7 +24,7 @@ find . -name "*.md" -type f | while read -r mdfile; do
     pandoc "$mdfile" \
         -o "$pdffile" \
         --pdf-engine=weasyprint \
-        --css=../pdf-style.css \
+        --css="$SCRIPT_DIR/../styles/pdf-style.css" \
         --toc \
         --toc-depth=3 \
         2>/dev/null

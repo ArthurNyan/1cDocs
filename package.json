@@ -4,12 +4,12 @@
   "description": "Документация проекта «Магазин одежды 1Стиль» по PMBOK Guide 6-я редакция",
   "main": "index.js",
   "scripts": {
-    "build": "bash generate_web_simple.sh",
+    "build": "cd scripts && bash generate_web_simple.sh",
     "dev": "python3 -m http.server 8000 --directory dist",
     "clean": "rm -rf dist/*.html dist/temp_content.html",
-    "generate:pdf": "bash generate_all_pdfs.sh",
+    "generate:pdf": "cd scripts && bash generate_all_pdfs.sh",
     "deploy": "vercel --prod",
-    "vercel-build": "bash generate_web_simple.sh"
+    "vercel-build": "cd scripts && bash generate_web_simple.sh"
   },
   "keywords": [
     "pmbok",

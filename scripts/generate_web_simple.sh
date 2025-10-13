@@ -2,8 +2,9 @@
 
 # Генератор веб-документации (упрощенная версия)
 
-DOCS_DIR="docs"
-DIST_DIR="dist"
+DOCS_DIR="../docs"
+DIST_DIR="../dist"
+STYLES_DIR="../styles"
 
 echo "🚀 Генерация веб-документации..."
 
@@ -14,8 +15,8 @@ mkdir -p "$DIST_DIR"
 find "$DIST_DIR" -name "*.html" ! -name "index.html" -type f -delete
 
 # Копируем стили и скрипты
-cp web-styles.css "$DIST_DIR/styles.css"
-cp web-script.js "$DIST_DIR/script.js"
+cp "$STYLES_DIR/web-styles.css" "$DIST_DIR/styles.css"
+cp "$STYLES_DIR/web-script.js" "$DIST_DIR/script.js"
 
 # Проверяем наличие главной страницы
 if [ ! -f "$DIST_DIR/index.html" ]; then
