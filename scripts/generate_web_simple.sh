@@ -2,6 +2,15 @@
 
 # Генератор веб-документации (упрощенная версия)
 
+# Определяем путь к pandoc
+if [ -x "../bin/pandoc" ]; then
+    PANDOC="../bin/pandoc"
+elif [ -x "./bin/pandoc" ]; then
+    PANDOC="./bin/pandoc"
+else
+    PANDOC="pandoc"
+fi
+
 DOCS_DIR="../docs"
 DIST_DIR="../dist"
 STYLES_DIR="../styles"
@@ -44,8 +53,8 @@ generate_doc() {
     
     echo "📝 Генерация: $title..."
     
-    # Конвертируем MD в HTML
-    pandoc "$md_file" -f markdown -t html -o "$DIST_DIR/temp_content.html" 2>/dev/null
+    # Конвертируем MD в HTML напрямую в переменную
+    content=$($PANDOC "$md_file" -f markdown -t html 2>/dev/null)
     
     # Создаем полную страницу
     cat > "$html_file" << EOF
@@ -104,7 +113,7 @@ generate_doc() {
             <a href="index.html">Главная</a> <span>→</span> <span>$section</span> <span>→</span> <span>$title</span>
         </div>
         <article class="markdown-body">
-$(cat "$DIST_DIR/temp_content.html")
+$content
         </article>
         <footer class="doc-footer">
             <p>Документация проекта "Магазин одежды «1Стиль»"</p>
@@ -117,7 +126,6 @@ $(cat "$DIST_DIR/temp_content.html")
 </html>
 EOF
     
-    rm -f "$DIST_DIR/temp_content.html"
     ((doc_count++))
 }
 

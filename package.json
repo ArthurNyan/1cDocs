@@ -12,7 +12,7 @@
     "pdf": "docker-compose run --rm pdf",
     "pdf:local": "cd scripts && bash generate_all_pdfs.sh",
     "deploy": "vercel --prod",
-    "vercel-build": "docker-compose run --rm build"
+    "vercel-build": "bash install-pandoc.sh && cd scripts && bash generate_web_simple.sh"
   },
   "keywords": [
     "pmbok",

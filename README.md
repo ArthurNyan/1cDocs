@@ -188,7 +188,9 @@ npm run deploy
 | `make docker-serve` | Сервер в Docker |
 | `make docker-all` | HTML + PDF + сервер |
 
-Подробнее: [DOCKER_README.md](DOCKER_README.md)
+📖 **Подробная документация:**
+- [DOCKER_README.md](DOCKER_README.md) - Docker setup и команды
+- [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md) - Деплой на Vercel без Docker
 
 ## 🔧 Технологии
 

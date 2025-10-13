@@ -6,6 +6,9 @@ yarn.lock
 # Build outputs - полностью игнорируем dist/
 dist/
 
+# Локально установленный Pandoc для Vercel
+bin/
+
 # PDF outputs (optional - uncomment if you don't want to track PDFs)
 # docs/**/*.pdf
 
