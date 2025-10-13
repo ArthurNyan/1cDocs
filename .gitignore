@@ -1,1 +1,50 @@
-config/.gitignore
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build outputs - полностью игнорируем dist/
+dist/
+
+# PDF outputs (optional - uncomment if you don't want to track PDFs)
+# docs/**/*.pdf
+
+# System files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Vercel
+.vercel
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+*.swp
+*~
+.directory

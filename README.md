@@ -43,6 +43,10 @@
 ├── 📁 tools/                          # Вспомогательные инструменты
 │   └── generate_web_docs.py          # Python генератор (deprecated)
 │
+├── 📁 templates/                      # Шаблоны HTML
+│   ├── index.html                    # Шаблон главной страницы
+│   └── README.md                     # Документация шаблонов
+│
 ├── 📁 configuration/                  # Скриншоты 1C конфигурации
 ├── 📁 unpacked_config/                # Распакованная конфигурация 1C
 │
