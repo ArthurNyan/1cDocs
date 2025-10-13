@@ -1,0 +1,37 @@
+# Git
+.git/
+.gitignore
+
+# Node
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+
+# Vercel
+.vercel/
+
+# System files
+.DS_Store
+*.swp
+*~
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+temp_content.html
+
+# PDF outputs (генерируются при сборке)
+docs/**/*.pdf
+
+# Unpacked config (большой размер)
+unpacked_config/
+

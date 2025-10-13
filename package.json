@@ -4,12 +4,15 @@
   "description": "Документация проекта «Магазин одежды 1Стиль» по PMBOK Guide 6-я редакция",
   "main": "index.js",
   "scripts": {
-    "build": "cd scripts && bash generate_web_simple.sh",
-    "dev": "python3 -m http.server 8000 --directory dist",
-    "clean": "rm -rf dist/*.html dist/temp_content.html",
-    "generate:pdf": "cd scripts && bash generate_all_pdfs.sh",
+    "build": "docker-compose run --rm build",
+    "build:local": "cd scripts && bash generate_web_simple.sh",
+    "dev": "docker-compose up web",
+    "dev:local": "python3 -m http.server 8000 --directory dist",
+    "clean": "rm -rf dist/*",
+    "pdf": "docker-compose run --rm pdf",
+    "pdf:local": "cd scripts && bash generate_all_pdfs.sh",
     "deploy": "vercel --prod",
-    "vercel-build": "cd scripts && bash generate_web_simple.sh"
+    "vercel-build": "docker-compose run --rm build"
   },
   "keywords": [
     "pmbok",

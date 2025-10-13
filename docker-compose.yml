@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  # Сборка веб-документации
+  build:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: 1c-docs-builder
+    volumes:
+      - ./docs:/app/docs:ro
+      - ./templates:/app/templates:ro
+      - ./styles:/app/styles:ro
+      - ./dist:/app/dist
+    command: bash -c "cd scripts && bash generate_web_simple.sh"
+
+  # Локальный веб-сервер для просмотра
+  web:
+    image: python:3.11-alpine
+    container_name: 1c-docs-web
+    working_dir: /app
+    volumes:
+      - ./dist:/app:ro
+    ports:
+      - "8000:8000"
+    command: python3 -m http.server 8000
+    depends_on:
+      - build
+
+  # Генерация PDF документов
+  pdf:
+    build:
+      context: .
+      dockerfile: Dockerfile.pdf
+    container_name: 1c-docs-pdf
+    volumes:
+      - ./docs:/app/docs
+      - ./styles:/app/styles:ro
+    command: bash -c "cd scripts && bash generate_all_pdfs.sh"
