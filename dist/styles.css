@@ -314,8 +314,7 @@ body {
 }
 
 .markdown-body code {
-    background: #f4f4f4;
-    color: #c7254e;
+    color: #f4f4f4;
     padding: 0.2rem 0.4rem;
     border-radius: 3px;
     font-family: 'Courier New', monospace;
