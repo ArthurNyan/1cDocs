@@ -88,7 +88,7 @@ npm run build
 <div class="info-card">
     <i class="fas fa-money-bill-wave"></i>
     <h3>Бюджет</h3>
-    <p>1 000 000 ₽</p>  <!-- Измените здесь -->
+    <p>14 650 000 ₽</p>  <!-- Измените здесь -->
 </div>
 ```
 
